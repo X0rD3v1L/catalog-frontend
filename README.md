@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Catalog Task Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This task is designed to provide a frontend interface for displaying and interacting with stock price data.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This task includes a React component that simulates fetching stock price data and displays it in a chart. The application features a tab interface to switch between different views and a time frame selector to adjust the displayed data.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+catalog-frontend/
+│
+├── public/
+│   └── index.html       # Main HTML file for the application
+│
+├── src/
+│   ├── components/      # Contains reusable components like RangeSwitcher
+│   │   └── RangeSwitcher.js
+│   ├── constants/       # Constants for tabs, timeframes, and dummy data
+│   │   ├── HeaderConstants.js
+│   │   └── StocksDataOverTime.js
+    ├── fonts/           # Contains custom font files
+│   │   └── circular-std-medium-500.ttf
+│   │
+│   ├── fonts.css        # Font styles used in the application
+│   ├── App.css          # Application-wide styles
+│   ├── App.js           # Main application component
+│   └── index.js         # Entry point for the application
+│
+├── .gitignore           # Git ignore file
+├── package.json         # Project metadata and dependencies
+└── README.md            # This README file
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Price Display:** Shows the current price, change, and percentage change. (from dummy data)
+- **Tab Navigation:** Switch between different tabs (e.g., "Chart").
+- **Timeframe Selector:** Choose between different timeframes (e.g., "1d", "1w", "1m", "1y") to update the chart data.
+- **Chart Visualization:** Displays stock price data in a chart format.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+To get started with the project, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/X0rD3v1L/catalog-frontend.git
+   cd catalog-frontend
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Start the development server:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   This will start a development server and open the application in your default web browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Data Handling
 
-## Learn More
+The application uses dummy data for demonstration purposes. To integrate real data:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **API Integration:** Modify the `fetchData` function in `App.js` to make an API call for fetching live data.
+- **WebSocket Integration:** Set up WebSocket logic in `App.js` or the `services` folder to receive real-time updates.
