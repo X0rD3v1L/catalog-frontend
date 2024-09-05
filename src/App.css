@@ -13,16 +13,16 @@
   margin-bottom: 0;
   font-size: 70px;
   font-weight: 400;
-  color: #1A243A;
+  color: #1a243a;
 }
 
 .price-header sup {
-  color: #BDBEBF;
+  color: #bdbebf;
   font-size: 24px;
 }
 
 .price-change {
-  color: #67BF6B;
+  color: #67bf6b;
   font-size: 18px;
   margin-top: 5px;
 }
@@ -30,11 +30,9 @@
 .tabs {
   display: flex;
   justify-content: flex-start;
-  margin: 10px 0;
+  margin: 10px 0px 30px 10px;
   font-size: 18px;
-  gap: 45px;
-  color: #6F7177;
-
+  gap: 40px;
 }
 
 .timeframes {
@@ -52,10 +50,15 @@
   cursor: pointer;
   font-size: 16px;
   padding: 5px 10px;
+  color: #6f7177;
+  font-size: 18px;
+  font-weight: 400;
   font-family: "Circular Std", sans-serif;
 }
 
 .tab.active {
+  color: #1a243a;
+  padding: 10px;
   border-bottom: 3px solid #4b40ee;
 }
 .timeframe.active {

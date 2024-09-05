@@ -11,11 +11,11 @@ const RangeSwitcher = ({ data }) => {
 
     const chart = createChart(chartContainerRef.current, {
       width: chartContainerRef.current.clientWidth,
-      height: 300,
+      height: 343,
       layout: {
         background: { type: "solid", color: "white" },
         textColor: "black",
-        fontFamily: "Circular Std, sans-serif"
+        fontFamily: "Circular Std, sans-serif",
       },
       grid: {
         vertLines: { color: "rgba(197, 203, 206, 0.5)" },
